@@ -7,6 +7,11 @@ pipeline{
 
             }
         }
+        stage('mvn package'){
+            steps{
+                  sh 'mvn package'
+            }
+        }
         stage('Create DockerImage'){
             steps{
                   sh 'docker build -t ankita2109/mytestappjava .'
